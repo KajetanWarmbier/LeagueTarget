@@ -43,7 +43,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder: called");
 
         Glide.with(mContext)
                 .asBitmap()
@@ -55,13 +54,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + mImageNames.get(position));
 
-                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
                 Context context = v.getContext();
                 Intent intent = new Intent(context, TeamActivity.class);
-//                Integer actualPosition = position;
-//                String actualPositionString = actualPosition.toString();
                 intent.putExtra("teamId", position);
                 intent.putExtra("seriesApiLink", seriesApiLink);
                 context.startActivity(intent);

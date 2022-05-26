@@ -83,7 +83,6 @@ public class TeamActivity extends AppCompatActivity {
                         JSONArray leagueSeriesJson = new JSONArray(myResponse);
                         JSONObject teamJson = leagueSeriesJson.getJSONObject(teamId);
                         JSONArray teamPlayers = teamJson.getJSONArray("players");
-                        Log.i(TAG, teamPlayers.toString());
 
                         for (int y = 0; y < teamPlayers.length(); y++) {
                             String image = teamPlayers.getJSONObject(y).optString("image_url");

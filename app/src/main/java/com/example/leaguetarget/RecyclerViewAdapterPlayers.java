@@ -1,7 +1,6 @@
 package com.example.leaguetarget;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +47,6 @@ public class RecyclerViewAdapterPlayers extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder: called");
 
         Glide.with(mContext)
                 .asBitmap()
@@ -68,7 +66,6 @@ public class RecyclerViewAdapterPlayers extends RecyclerView.Adapter<RecyclerVie
         holder.player_parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + playersImages.get(position));
             }
         });
     }
