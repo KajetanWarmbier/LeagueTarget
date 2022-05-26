@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/teams_listitem_background"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="5dp">
+
+        <ImageView
+            android:id="@+id/team_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/player_fullname"
+            android:layout_width="171dp"
+            android:layout_height="98dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/team_image"
+            android:gravity="center_vertical"
+            android:text="Team"
+            android:textColor="#cbd3d7"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/team_image"
+            tools:layout_editor_absoluteY="39dp" />
+
+        <ImageView
+            android:id="@+id/teamListImageButton"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toEndOf="@+id/player_fullname"
+            android:background="#051e2d"
+            android:src="@drawable/ic_action_name"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
